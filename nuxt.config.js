@@ -1,3 +1,5 @@
+import { CustomIcons, CustomTheme } from './chakra.config'
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -42,6 +44,17 @@ export default {
     manifest: {
       lang: 'en',
     },
+  },
+
+  // Chakra UI module configuration: https://vue.chakra-ui.com/plugin-options
+  chakra: {
+    config: {
+      autoImport: true,
+    },
+    icons: {
+      extend: CustomIcons,
+    },
+    extendTheme: CustomTheme,
   },
 
   // Apollo module configuration: https://github.com/nuxt-community/apollo-module#setup

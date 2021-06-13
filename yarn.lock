@@ -4629,7 +4629,7 @@ cardinal@^2.1.1:
     ansicolors "~0.3.2"
     redeyed "~2.1.0"
 
-chakra-loader@latest:
+chakra-loader@^1.0.3, chakra-loader@latest:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/chakra-loader/-/chakra-loader-1.0.3.tgz#de60c06ea34ad2ded193a30139c5c6872b385e8c"
   integrity sha512-Jc2UUJoF9YVn/K6Hk+ARg0Cpm1iB1RILFClfsCRFZkd2uvb7lyc735kU8EoNrtqAk+e3+WJJmMmB/5QWxvr3wA==
