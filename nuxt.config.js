@@ -33,6 +33,8 @@ export default {
     '@nuxtjs/emotion',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    // https://github.com/nuxt-community/apollo-module
+    '@nuxtjs/apollo',
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -42,6 +44,19 @@ export default {
     },
   },
 
+  // Apollo module configuration: https://github.com/nuxt-community/apollo-module#setup
+  apollo: {
+    clientConfigs: {
+      default: '@/plugins/apollo-config.js',
+    },
+  },
+
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  // Runtime configuration: https://nuxtjs.org/api/configuration-runtime-config
+  publicRuntimeConfig: {
+    baseUrl: process.env.BASE_URL,
+    apiUrl: process.env.API_URL,
+  },
 }

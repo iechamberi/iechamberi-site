@@ -1,0 +1,8 @@
+schema: ${API_URL}
+overwrite: true
+generates:
+  ./apollo/fragment-types.json:
+    plugins:
+      - fragment-matcher
+    config:
+      apolloClientVersion: 3
