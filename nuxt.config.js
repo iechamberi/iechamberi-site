@@ -13,7 +13,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: ['@/assets/css/main.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -37,6 +37,8 @@ export default {
     '@nuxtjs/pwa',
     // https://github.com/nuxt-community/apollo-module
     '@nuxtjs/apollo',
+    // https://i18n.nuxtjs.org/es
+    'nuxt-i18n',
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -62,6 +64,18 @@ export default {
     clientConfigs: {
       default: '@/plugins/apollo-config.js',
     },
+  },
+
+  // i18n module configuration: https://i18n.nuxtjs.org/es/setup
+  i18n: {
+    baseUrl: process.env.BASE_URL,
+    locales: [
+      { code: 'es', iso: 'es-ES', file: 'es.js' },
+      { code: 'en', iso: 'en-GB', file: 'en.js' },
+    ],
+    defaultLocale: 'es',
+    lazy: true,
+    langDir: 'locales/',
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

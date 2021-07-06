@@ -1,0 +1,15 @@
+html,
+body {
+  height: 100%;
+}
+
+#__nuxt,
+#__layout,
+#__chakra-app {
+  height: 100%;
+}
+
+.js-focus-visible :focus:not([data-focus-visible-added]) {
+  outline: none;
+  box-shadow: none;
+}

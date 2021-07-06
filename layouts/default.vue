@@ -1,30 +1,36 @@
 <template>
-  <div class="container">
-    <CThemeProvider>
-      <CColorModeProvider>
-        <CBox font-family="body" as="main">
-          <CReset />
+  <CThemeProvider>
+    <CColorModeProvider>
+      <CBox font-family="body" h="full">
+        <CReset />
+        <SiteHeader
+          :brand="siteHeader.brand"
+          :menu-items="siteHeader.menuItems"
+        />
+        <CBox as="main" min-h="calc(100vh - 128px)">
           <Nuxt />
         </CBox>
-      </CColorModeProvider>
-    </CThemeProvider>
-  </div>
+      </CBox>
+    </CColorModeProvider>
+  </CThemeProvider>
 </template>
 <script>
-import {
-  CThemeProvider,
-  CColorModeProvider,
-  CReset,
-  CBox,
-} from '@chakra-ui/vue'
+import 'focus-visible/dist/focus-visible'
+import SITE_HEADER_QUERY from '@/apollo/queries/site-header'
 
 export default {
   name: 'App',
-  components: {
-    CThemeProvider,
-    CColorModeProvider,
-    CReset,
-    CBox,
+  data() {
+    return {
+      siteHeader: null,
+      siteFooter: null,
+    }
+  },
+  apollo: {
+    siteHeader: {
+      query: SITE_HEADER_QUERY,
+      update: (data) => data.siteHeader,
+    },
   },
 }
 </script>
