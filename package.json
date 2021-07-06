@@ -28,7 +28,7 @@
     "@nuxtjs/emotion": "^0.1.0",
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.9.1",
-    "graphql-tag": "^2.12.4",
+    "graphql-tag": "^2.12.5",
     "nuxt": "^2.15.7"
   },
   "devDependencies": {
