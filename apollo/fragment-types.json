@@ -5,6 +5,9 @@
       "UsersPermissionsMeRole",
       "UsersPermissionsLoginPayload",
       "UserPermissionsPasswordPayload",
+      "HomePage",
+      "updateHomePagePayload",
+      "deleteHomePagePayload",
       "Link",
       "LinkConnection",
       "LinkAggregator",
@@ -14,9 +17,16 @@
       "LinkConnectionUpdated_at",
       "LinkConnectionUrl",
       "LinkConnectionExternal",
+      "LinkConnectionLocale",
       "createLinkPayload",
       "updateLinkPayload",
       "deleteLinkPayload",
+      "PrivacyPolicy",
+      "updatePrivacyPolicyPayload",
+      "deletePrivacyPolicyPayload",
+      "SiteFooter",
+      "updateSiteFooterPayload",
+      "deleteSiteFooterPayload",
       "SiteHeader",
       "updateSiteHeaderPayload",
       "deleteSiteHeaderPayload",
@@ -76,7 +86,12 @@
       "updateUserPayload",
       "deleteUserPayload",
       "ComponentCommonBrand",
-      "ComponentCommonLink"
+      "ComponentCommonButton",
+      "ComponentCommonImage",
+      "ComponentCommonLink",
+      "ComponentCommonMetaTags",
+      "ComponentSectionsHeading",
+      "ComponentSectionsHero"
     ]
   }
 }
