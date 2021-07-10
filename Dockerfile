@@ -30,6 +30,7 @@ RUN rm yarn.lock
 COPY --from=builder /opt/app-root/src/.nuxt ./.nuxt/
 COPY --from=builder /opt/app-root/src/static ./static/
 COPY --from=builder /opt/app-root/src/nuxt.config.js ./
+COPY --from=builder /opt/app-root/src/chakra.config.js ./
 
 # run with the production settings
 ENV NODE_ENV production

@@ -99,4 +99,5 @@ local.Dockerfile
 # Git data
 .gitignore
 .git
+.github
 README.md
