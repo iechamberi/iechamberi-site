@@ -21,8 +21,8 @@
               v-chakra
               w="8"
               h="8"
-              :src="brand.logo.url"
-              :alt="brand.logo.alternativeText"
+              :src="brand.logo.media.url"
+              :alt="brand.logo.alt"
             />
             <CBox font-size="xl" font-weight="medium">{{ brand.name }}</CBox>
           </CStack>
