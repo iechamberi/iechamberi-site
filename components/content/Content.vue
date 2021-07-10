@@ -23,11 +23,6 @@ export default {
   font-weight: 800;
   margin-bottom: 2rem;
 }
-.c-content::v-deep p {
-  font-size: 1.25rem;
-  color: #4a5568;
-  margin-bottom: 1.25rem;
-}
 .c-content::v-deep h2 {
   font-size: 1.875rem;
   font-weight: 700;
@@ -39,12 +34,29 @@ export default {
   font-weight: 700;
   margin-bottom: 1.25rem;
 }
+.c-content::v-deep h4 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+}
+.c-content::v-deep p,
 .c-content::v-deep ul {
-  margin-left: 1.25rem;
+  font-size: 1.125rem;
   color: #4a5568;
   margin-bottom: 1.25rem;
 }
+.c-content::v-deep ul {
+  margin-left: 1.25rem;
+}
 .c-content::v-deep ul li {
   margin-bottom: 1.25rem;
+}
+.c-content::v-deep a {
+  color: #f59e0b;
+  font-weight: 500;
+}
+.c-content::v-deep a:hover,
+.c-content::v-deep a:focus {
+  text-decoration: underline;
 }
 </style>

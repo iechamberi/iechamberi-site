@@ -7,7 +7,7 @@
           :brand="siteHeader.brand"
           :menu-items="siteHeader.menuItems"
         />
-        <CBox as="main" min-h="calc(100vh - 128px)">
+        <CBox as="main" min-h="calc(100vh - 128px)" pt="16">
           <Nuxt />
         </CBox>
         <SiteFooter

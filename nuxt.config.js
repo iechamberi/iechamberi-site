@@ -89,9 +89,14 @@ export default {
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
 
-  // Runtime configuration: https://nuxtjs.org/api/configuration-runtime-config
+  // Runtime configuration: https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-runtime-config
   publicRuntimeConfig: {
     baseUrl: process.env.BASE_URL,
     apiUrl: process.env.API_URL,
+  },
+
+  // Loading configuration: https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-loading
+  loading: {
+    color: '#f59e0b',
   },
 }

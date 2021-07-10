@@ -3,7 +3,8 @@
   <CPseudoBox
     d="flex"
     h="calc(100vh - 128px)"
-    :background-image="`url('${image.media.url}')`"
+    bg="gray.900"
+    :bg-image="`url('${image.media.url}')`"
     bg-size="cover"
     background-repeat="no-repeat"
     pos="relative"
