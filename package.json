@@ -10,8 +10,7 @@
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "yarn lint:js",
     "graphql:gen": "graphql-codegen --config codegen.yml --require dotenv/config",
-    "predev": "yarn graphql:gen",
-    "prestart": "yarn graphql:gen"
+    "predev": "yarn graphql:gen"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint"
