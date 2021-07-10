@@ -99,4 +99,8 @@ export default {
   loading: {
     color: '#f59e0b',
   },
+
+  router: {
+    middleware: 'redirect',
+  },
 }
