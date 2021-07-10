@@ -10,6 +10,10 @@
         <CBox as="main" min-h="calc(100vh - 128px)">
           <Nuxt />
         </CBox>
+        <SiteFooter
+          :copyright="siteFooter.copyright"
+          :menu-items="siteFooter.menuItems"
+        />
       </CBox>
     </CColorModeProvider>
   </CThemeProvider>
@@ -17,19 +21,18 @@
 <script>
 import 'focus-visible/dist/focus-visible'
 import SITE_HEADER_QUERY from '@/apollo/queries/site-header'
+import SITE_FOOTER_QUERY from '@/apollo/queries/site-footer'
 
 export default {
   name: 'App',
-  data() {
-    return {
-      siteHeader: null,
-      siteFooter: null,
-    }
-  },
   apollo: {
     siteHeader: {
       query: SITE_HEADER_QUERY,
       update: (data) => data.siteHeader,
+    },
+    siteFooter: {
+      query: SITE_FOOTER_QUERY,
+      update: (data) => data.siteFooter,
     },
   },
 }

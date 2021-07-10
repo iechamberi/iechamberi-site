@@ -3,11 +3,11 @@ import { CustomIcons, CustomTheme } from './chakra.config'
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'iechamberi-site',
+    title: 'Iglesia Evangélica de Chamberí',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'og:site_name', property: 'og:site_name', content: 'IE Chamberí' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
   },
@@ -33,20 +33,15 @@ export default {
     '@chakra-ui/nuxt',
     // https://go.nuxtjs.dev/emotion
     '@nuxtjs/emotion',
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
     // https://github.com/nuxt-community/apollo-module
     '@nuxtjs/apollo',
     // https://i18n.nuxtjs.org/es
     'nuxt-i18n',
+    // https://github.com/nuxt-community/dayjs-module
+    '@nuxtjs/dayjs',
+    // https://github.com/nuxt-community/markdownit-module
+    '@nuxtjs/markdownit',
   ],
-
-  // PWA module configuration: https://go.nuxtjs.dev/pwa
-  pwa: {
-    manifest: {
-      lang: 'en',
-    },
-  },
 
   // Chakra UI module configuration: https://vue.chakra-ui.com/plugin-options
   chakra: {
@@ -76,6 +71,19 @@ export default {
     defaultLocale: 'es',
     lazy: true,
     langDir: 'locales/',
+  },
+
+  // Dayjs module configuration: https://github.com/nuxt-community/dayjs-module#usage
+  dayjs: {
+    locales: ['es', 'en'],
+    defaultLocale: 'es',
+    defaultTimeZone: 'Europe/Madrid',
+    plugins: ['utc', 'timezone'],
+  },
+
+  // Markdownit module configuration: https://github.com/nuxt-community/markdownit-module#setup
+  markdownit: {
+    runtime: true,
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
