@@ -51,3 +51,28 @@ jobs:
       - name: Upload image to registry 📤
         shell: bash
         run: docker push -a registry.digitalocean.com/iechamberi/site
+
+  deploy:
+    needs: release
+
+    name: Deploy to production
+
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest]
+        node: [14]
+
+    steps:
+      - name: Checkout 🛎
+        uses: actions/checkout@v2
+
+      - name: Install doctl 🎛
+        uses: digitalocean/action-doctl@v2
+        with:
+          token: ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }}
+
+      - name: Create a deployment 🚀
+        shell: bash
+        run: doctl apps create-deployment ${{ secrets.DIGITALOCEAN_APP_ID }} --wait

@@ -63,7 +63,7 @@ export default {
 
   // i18n module configuration: https://i18n.nuxtjs.org/es/setup
   i18n: {
-    baseUrl: process.env.BASE_URL,
+    baseUrl: ({ $config }) => $config.baseUrl,
     locales: [
       { code: 'es', iso: 'es-ES', file: 'es.js' },
       { code: 'en', iso: 'en-GB', file: 'en.js' },
