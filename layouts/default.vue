@@ -14,6 +14,7 @@
           :copyright="siteFooter.copyright"
           :menu-items="siteFooter.menuItems"
         />
+        <CookieConsent />
       </CBox>
     </CColorModeProvider>
   </CThemeProvider>

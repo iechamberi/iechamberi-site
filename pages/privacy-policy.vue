@@ -13,7 +13,7 @@ import getMetaTags from '@/utils/meta-tags'
 export default {
   nuxtI18n: {
     paths: {
-      es: '/politica-privacidad',
+      es: '/politica-de-privacidad',
       en: '/privacy-policy',
     },
   },
