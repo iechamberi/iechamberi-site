@@ -14,7 +14,8 @@
       <CFlex justify="space-between">
         <CLink
           as="nuxt-link"
-          :to="localePath('/')"
+          d="flex"
+          :to="localePath('index')"
           :_hover="{ textDecoration: 'none' }"
         >
           <CStack spacing="3" is-inline align="center">
@@ -28,6 +29,7 @@
             <CBox font-size="xl" font-weight="medium">{{ brand.name }}</CBox>
           </CStack>
         </CLink>
+        <LangSwitcher />
       </CFlex>
     </Container>
   </CFlex>

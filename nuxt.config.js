@@ -70,12 +70,16 @@ export default {
   i18n: {
     baseUrl: ({ $config }) => $config.baseUrl,
     locales: [
-      { code: 'es', iso: 'es-ES', file: 'es.js' },
-      { code: 'en', iso: 'en-GB', file: 'en.js' },
+      { code: 'es', name: 'Español', iso: 'es-ES', file: 'es.js' },
+      { code: 'en', name: 'English', iso: 'en-GB', file: 'en.js' },
     ],
     defaultLocale: 'es',
     lazy: true,
     langDir: 'locales/',
+    detectBrowserLanguage: {
+      useCookie: true,
+      onlyOnRoot: true,
+    },
   },
 
   // Dayjs module configuration: https://github.com/nuxt-community/dayjs-module#usage

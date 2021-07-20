@@ -1,10 +1,10 @@
-import gql from 'graphql-tag'
+import { gql } from 'graphql-tag'
 import MetaTags from '@/apollo/fragments/meta-tags'
 
 const PRIVACY_POLICY_QUERY = gql`
   ${MetaTags}
-  query PrivacyPolicy {
-    privacyPolicy {
+  query PrivacyPolicy($locale: String) {
+    privacyPolicy(locale: $locale) {
       metaTags {
         ...MetaTags
       }

@@ -29,10 +29,20 @@ export default {
   apollo: {
     siteHeader: {
       query: SITE_HEADER_QUERY,
+      variables() {
+        return {
+          locale: this.$i18n.locale,
+        }
+      },
       update: (data) => data.siteHeader,
     },
     siteFooter: {
       query: SITE_FOOTER_QUERY,
+      variables() {
+        return {
+          locale: this.$i18n.locale,
+        }
+      },
       update: (data) => data.siteFooter,
     },
   },

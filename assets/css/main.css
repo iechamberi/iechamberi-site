@@ -9,7 +9,8 @@ body {
   height: 100%;
 }
 
-.js-focus-visible :focus:not([data-focus-visible-added]) {
+.js-focus-visible a:focus:not(.focus-visible),
+.js-focus-visible button:focus:not(.focus-visible) {
   outline: none;
   box-shadow: none;
 }

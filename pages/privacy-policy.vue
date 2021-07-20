@@ -17,9 +17,12 @@ export default {
       en: '/privacy-policy',
     },
   },
-  async asyncData({ app }) {
+  async asyncData({ app, i18n }) {
     const client = app.apolloProvider.defaultClient
-    const { data } = await client.query({ query: PRIVACY_POLICY_QUERY })
+    const { data } = await client.query({
+      query: PRIVACY_POLICY_QUERY,
+      variables: { locale: i18n.locale },
+    })
     return {
       privacyPolicy: data.privacyPolicy,
     }
