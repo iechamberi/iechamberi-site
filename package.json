@@ -31,7 +31,7 @@
     "focus-visible": "^5.2.0",
     "graphql-tag": "^2.12.5",
     "nuxt": "^2.15.7",
-    "nuxt-i18n": "^6.27.3",
+    "nuxt-i18n": "^6.28.0",
     "vue-cookie-law": "^1.13.3"
   },
   "devDependencies": {
