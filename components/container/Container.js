@@ -17,7 +17,7 @@ const Container = {
     componentStyles() {
       return {
         maxW: 'containers.xl',
-        px: '4',
+        px: ['4', '8'],
         mx: 'auto',
         flexGrow: '1',
       }

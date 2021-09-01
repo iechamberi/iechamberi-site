@@ -13,7 +13,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['@/assets/css/main.css'],
+  css: ['@/assets/css/main'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
@@ -96,7 +96,14 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    postcss: {
+      plugins: {
+        'postcss-nested': true,
+        'postcss-modules-values': true,
+      },
+    },
+  },
 
   // Runtime configuration: https://nuxtjs.org/docs/2.x/configuration-glossary/configuration-runtime-config
   publicRuntimeConfig: {

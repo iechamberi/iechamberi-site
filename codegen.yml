@@ -5,4 +5,4 @@ generates:
     plugins:
       - fragment-matcher
     config:
-      apolloClientVersion: 3
+      apolloClientVersion: 2

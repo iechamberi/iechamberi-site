@@ -29,7 +29,20 @@
             <CBox font-size="xl" font-weight="medium">{{ brand.name }}</CBox>
           </CStack>
         </CLink>
-        <LangSwitcher />
+        <CFlex>
+          <CStack spacing="4" is-inline align="center" mr="8" as="nav">
+            <CLink
+              v-for="item in menuItems"
+              :key="item.id"
+              as="nuxt-link"
+              d="flex"
+              :_hover="{ color: 'amber.500' }"
+              :to="localePath(item.link.url)"
+              >{{ item.label }}</CLink
+            >
+          </CStack>
+          <LangSwitcher />
+        </CFlex>
       </CFlex>
     </Container>
   </CFlex>
@@ -50,3 +63,14 @@ export default {
   },
 }
 </script>
+
+<style lang="postcss" scoped>
+@import '@/assets/css/settings/_settings.colors.pcss';
+
+nav {
+  .nuxt-link-exact-active {
+    color: color-gray-400;
+    pointer-events: none;
+  }
+}
+</style>

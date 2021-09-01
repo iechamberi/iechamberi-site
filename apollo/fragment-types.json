@@ -1,97 +1,336 @@
 {
-  "possibleTypes": {
-    "Morph": [
-      "UsersPermissionsMe",
-      "UsersPermissionsMeRole",
-      "UsersPermissionsLoginPayload",
-      "UserPermissionsPasswordPayload",
-      "HomePage",
-      "updateHomePagePayload",
-      "deleteHomePagePayload",
-      "Link",
-      "LinkConnection",
-      "LinkAggregator",
-      "LinkGroupBy",
-      "LinkConnectionId",
-      "LinkConnectionCreated_at",
-      "LinkConnectionUpdated_at",
-      "LinkConnectionUrl",
-      "LinkConnectionExternal",
-      "LinkConnectionLocale",
-      "createLinkPayload",
-      "updateLinkPayload",
-      "deleteLinkPayload",
-      "PrivacyPolicy",
-      "updatePrivacyPolicyPayload",
-      "deletePrivacyPolicyPayload",
-      "SiteFooter",
-      "updateSiteFooterPayload",
-      "deleteSiteFooterPayload",
-      "SiteHeader",
-      "updateSiteHeaderPayload",
-      "deleteSiteHeaderPayload",
-      "I18NLocale",
-      "UploadFile",
-      "UploadFileConnection",
-      "UploadFileAggregator",
-      "UploadFileAggregatorSum",
-      "UploadFileAggregatorAvg",
-      "UploadFileAggregatorMin",
-      "UploadFileAggregatorMax",
-      "UploadFileGroupBy",
-      "UploadFileConnectionId",
-      "UploadFileConnectionCreated_at",
-      "UploadFileConnectionUpdated_at",
-      "UploadFileConnectionName",
-      "UploadFileConnectionAlternativeText",
-      "UploadFileConnectionCaption",
-      "UploadFileConnectionWidth",
-      "UploadFileConnectionHeight",
-      "UploadFileConnectionFormats",
-      "UploadFileConnectionHash",
-      "UploadFileConnectionExt",
-      "UploadFileConnectionMime",
-      "UploadFileConnectionSize",
-      "UploadFileConnectionUrl",
-      "UploadFileConnectionPreviewUrl",
-      "UploadFileConnectionProvider",
-      "UploadFileConnectionProvider_metadata",
-      "deleteFilePayload",
-      "UsersPermissionsPermission",
-      "UsersPermissionsRole",
-      "UsersPermissionsRoleConnection",
-      "UsersPermissionsRoleAggregator",
-      "UsersPermissionsRoleGroupBy",
-      "UsersPermissionsRoleConnectionId",
-      "UsersPermissionsRoleConnectionName",
-      "UsersPermissionsRoleConnectionDescription",
-      "UsersPermissionsRoleConnectionType",
-      "createRolePayload",
-      "updateRolePayload",
-      "deleteRolePayload",
-      "UsersPermissionsUser",
-      "UsersPermissionsUserConnection",
-      "UsersPermissionsUserAggregator",
-      "UsersPermissionsUserGroupBy",
-      "UsersPermissionsUserConnectionId",
-      "UsersPermissionsUserConnectionCreated_at",
-      "UsersPermissionsUserConnectionUpdated_at",
-      "UsersPermissionsUserConnectionUsername",
-      "UsersPermissionsUserConnectionEmail",
-      "UsersPermissionsUserConnectionProvider",
-      "UsersPermissionsUserConnectionConfirmed",
-      "UsersPermissionsUserConnectionBlocked",
-      "UsersPermissionsUserConnectionRole",
-      "createUserPayload",
-      "updateUserPayload",
-      "deleteUserPayload",
-      "ComponentCommonBrand",
-      "ComponentCommonButton",
-      "ComponentCommonImage",
-      "ComponentCommonLink",
-      "ComponentCommonMetaTags",
-      "ComponentSectionsHeading",
-      "ComponentSectionsHero"
+  "__schema": {
+    "types": [
+      {
+        "kind": "UNION",
+        "name": "AboutUsSectionsDynamicZone",
+        "possibleTypes": [
+          {
+            "name": "ComponentSectionsSimpleFeature"
+          },
+          {
+            "name": "ComponentSectionsThreeColumnPictures"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "Morph",
+        "possibleTypes": [
+          {
+            "name": "UsersPermissionsMe"
+          },
+          {
+            "name": "UsersPermissionsMeRole"
+          },
+          {
+            "name": "UsersPermissionsLoginPayload"
+          },
+          {
+            "name": "UserPermissionsPasswordPayload"
+          },
+          {
+            "name": "AboutUs"
+          },
+          {
+            "name": "updateAboutUsPayload"
+          },
+          {
+            "name": "deleteAboutUsPayload"
+          },
+          {
+            "name": "HomePage"
+          },
+          {
+            "name": "updateHomePagePayload"
+          },
+          {
+            "name": "deleteHomePagePayload"
+          },
+          {
+            "name": "Link"
+          },
+          {
+            "name": "LinkConnection"
+          },
+          {
+            "name": "LinkAggregator"
+          },
+          {
+            "name": "LinkGroupBy"
+          },
+          {
+            "name": "LinkConnectionId"
+          },
+          {
+            "name": "LinkConnectionCreated_at"
+          },
+          {
+            "name": "LinkConnectionUpdated_at"
+          },
+          {
+            "name": "LinkConnectionUrl"
+          },
+          {
+            "name": "LinkConnectionExternal"
+          },
+          {
+            "name": "LinkConnectionLocale"
+          },
+          {
+            "name": "createLinkPayload"
+          },
+          {
+            "name": "updateLinkPayload"
+          },
+          {
+            "name": "deleteLinkPayload"
+          },
+          {
+            "name": "PrivacyPolicy"
+          },
+          {
+            "name": "updatePrivacyPolicyPayload"
+          },
+          {
+            "name": "deletePrivacyPolicyPayload"
+          },
+          {
+            "name": "SiteFooter"
+          },
+          {
+            "name": "updateSiteFooterPayload"
+          },
+          {
+            "name": "deleteSiteFooterPayload"
+          },
+          {
+            "name": "SiteHeader"
+          },
+          {
+            "name": "updateSiteHeaderPayload"
+          },
+          {
+            "name": "deleteSiteHeaderPayload"
+          },
+          {
+            "name": "WhatWeBelieve"
+          },
+          {
+            "name": "updateWhatWeBelievePayload"
+          },
+          {
+            "name": "deleteWhatWeBelievePayload"
+          },
+          {
+            "name": "I18NLocale"
+          },
+          {
+            "name": "UploadFile"
+          },
+          {
+            "name": "UploadFileConnection"
+          },
+          {
+            "name": "UploadFileAggregator"
+          },
+          {
+            "name": "UploadFileAggregatorSum"
+          },
+          {
+            "name": "UploadFileAggregatorAvg"
+          },
+          {
+            "name": "UploadFileAggregatorMin"
+          },
+          {
+            "name": "UploadFileAggregatorMax"
+          },
+          {
+            "name": "UploadFileGroupBy"
+          },
+          {
+            "name": "UploadFileConnectionId"
+          },
+          {
+            "name": "UploadFileConnectionCreated_at"
+          },
+          {
+            "name": "UploadFileConnectionUpdated_at"
+          },
+          {
+            "name": "UploadFileConnectionName"
+          },
+          {
+            "name": "UploadFileConnectionAlternativeText"
+          },
+          {
+            "name": "UploadFileConnectionCaption"
+          },
+          {
+            "name": "UploadFileConnectionWidth"
+          },
+          {
+            "name": "UploadFileConnectionHeight"
+          },
+          {
+            "name": "UploadFileConnectionFormats"
+          },
+          {
+            "name": "UploadFileConnectionHash"
+          },
+          {
+            "name": "UploadFileConnectionExt"
+          },
+          {
+            "name": "UploadFileConnectionMime"
+          },
+          {
+            "name": "UploadFileConnectionSize"
+          },
+          {
+            "name": "UploadFileConnectionUrl"
+          },
+          {
+            "name": "UploadFileConnectionPreviewUrl"
+          },
+          {
+            "name": "UploadFileConnectionProvider"
+          },
+          {
+            "name": "UploadFileConnectionProvider_metadata"
+          },
+          {
+            "name": "deleteFilePayload"
+          },
+          {
+            "name": "UsersPermissionsPermission"
+          },
+          {
+            "name": "UsersPermissionsRole"
+          },
+          {
+            "name": "UsersPermissionsRoleConnection"
+          },
+          {
+            "name": "UsersPermissionsRoleAggregator"
+          },
+          {
+            "name": "UsersPermissionsRoleGroupBy"
+          },
+          {
+            "name": "UsersPermissionsRoleConnectionId"
+          },
+          {
+            "name": "UsersPermissionsRoleConnectionName"
+          },
+          {
+            "name": "UsersPermissionsRoleConnectionDescription"
+          },
+          {
+            "name": "UsersPermissionsRoleConnectionType"
+          },
+          {
+            "name": "createRolePayload"
+          },
+          {
+            "name": "updateRolePayload"
+          },
+          {
+            "name": "deleteRolePayload"
+          },
+          {
+            "name": "UsersPermissionsUser"
+          },
+          {
+            "name": "UsersPermissionsUserConnection"
+          },
+          {
+            "name": "UsersPermissionsUserAggregator"
+          },
+          {
+            "name": "UsersPermissionsUserGroupBy"
+          },
+          {
+            "name": "UsersPermissionsUserConnectionId"
+          },
+          {
+            "name": "UsersPermissionsUserConnectionCreated_at"
+          },
+          {
+            "name": "UsersPermissionsUserConnectionUpdated_at"
+          },
+          {
+            "name": "UsersPermissionsUserConnectionUsername"
+          },
+          {
+            "name": "UsersPermissionsUserConnectionEmail"
+          },
+          {
+            "name": "UsersPermissionsUserConnectionProvider"
+          },
+          {
+            "name": "UsersPermissionsUserConnectionConfirmed"
+          },
+          {
+            "name": "UsersPermissionsUserConnectionBlocked"
+          },
+          {
+            "name": "UsersPermissionsUserConnectionRole"
+          },
+          {
+            "name": "createUserPayload"
+          },
+          {
+            "name": "updateUserPayload"
+          },
+          {
+            "name": "deleteUserPayload"
+          },
+          {
+            "name": "ComponentCommonBrand"
+          },
+          {
+            "name": "ComponentCommonButton"
+          },
+          {
+            "name": "ComponentCommonImage"
+          },
+          {
+            "name": "ComponentCommonLink"
+          },
+          {
+            "name": "ComponentCommonMetaTags"
+          },
+          {
+            "name": "ComponentSectionsCenteredContent"
+          },
+          {
+            "name": "ComponentSectionsHero"
+          },
+          {
+            "name": "ComponentSectionsPageHeader"
+          },
+          {
+            "name": "ComponentSectionsSimpleFeature"
+          },
+          {
+            "name": "ComponentSectionsThreeColumnPictures"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "WhatWeBelieveSectionsDynamicZone",
+        "possibleTypes": [
+          {
+            "name": "ComponentSectionsSimpleFeature"
+          },
+          {
+            "name": "ComponentSectionsThreeColumnPictures"
+          }
+        ]
+      }
     ]
   }
 }
