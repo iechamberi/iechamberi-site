@@ -29,7 +29,6 @@
             <CButton
               variant="outline"
               color="white"
-              flex-basis="1"
               font-weight="normal"
               font-size="sm"
               :_hover="{ color: 'black', bg: 'white' }"

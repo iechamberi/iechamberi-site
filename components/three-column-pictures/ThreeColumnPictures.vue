@@ -1,5 +1,5 @@
 <template>
-  <CBox as="section" :my="[24, 32, 40]">
+  <CBox as="section" :my="[16, 20, 24, '7rem']">
     <Container>
       <CGrid
         w="full"

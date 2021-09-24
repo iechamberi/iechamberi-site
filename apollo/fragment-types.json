@@ -3,24 +3,6 @@
     "types": [
       {
         "kind": "UNION",
-        "name": "AboutUsSectionsDynamicZone",
-        "possibleTypes": [
-          {
-            "name": "ComponentSectionsSimpleFeature"
-          },
-          {
-            "name": "ComponentSectionsThreeColumnPictures"
-          },
-          {
-            "name": "ComponentSectionsCallToAction"
-          },
-          {
-            "name": "ComponentSectionsCenteredContent"
-          }
-        ]
-      },
-      {
-        "kind": "UNION",
         "name": "HomePageSectionsDynamicZone",
         "possibleTypes": [
           {
@@ -46,15 +28,6 @@
           },
           {
             "name": "UserPermissionsPasswordPayload"
-          },
-          {
-            "name": "AboutUs"
-          },
-          {
-            "name": "updateAboutUsPayload"
-          },
-          {
-            "name": "deleteAboutUsPayload"
           },
           {
             "name": "Feature"
@@ -234,15 +207,6 @@
             "name": "deletePagePayload"
           },
           {
-            "name": "PrivacyPolicy"
-          },
-          {
-            "name": "updatePrivacyPolicyPayload"
-          },
-          {
-            "name": "deletePrivacyPolicyPayload"
-          },
-          {
             "name": "SiteFooter"
           },
           {
@@ -259,15 +223,6 @@
           },
           {
             "name": "deleteSiteHeaderPayload"
-          },
-          {
-            "name": "WhatWeBelieve"
-          },
-          {
-            "name": "updateWhatWeBelievePayload"
-          },
-          {
-            "name": "deleteWhatWeBelievePayload"
           },
           {
             "name": "I18NLocale"
@@ -453,9 +408,6 @@
             "name": "ComponentCommonNav"
           },
           {
-            "name": "ComponentCommonTextWithIcon"
-          },
-          {
             "name": "ComponentSectionsCallToAction"
           },
           {
@@ -505,24 +457,6 @@
           },
           {
             "name": "ComponentSectionsQuiltedImageList"
-          }
-        ]
-      },
-      {
-        "kind": "UNION",
-        "name": "WhatWeBelieveSectionsDynamicZone",
-        "possibleTypes": [
-          {
-            "name": "ComponentSectionsSimpleFeature"
-          },
-          {
-            "name": "ComponentSectionsThreeColumnPictures"
-          },
-          {
-            "name": "ComponentSectionsCallToAction"
-          },
-          {
-            "name": "ComponentSectionsCenteredContent"
           }
         ]
       }
