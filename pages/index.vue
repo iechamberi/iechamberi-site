@@ -1,6 +1,7 @@
 <template>
   <CBox>
     <Hero v-bind="homePage && homePage.hero" />
+    <DynamicZone v-if="homePage" :sections="homePage.sections" />
   </CBox>
 </template>
 
