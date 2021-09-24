@@ -2,17 +2,20 @@
   <CThemeProvider>
     <CColorModeProvider>
       <CBox font-family="body" h="full">
-        <CReset />
+        <CReset :config="config" />
         <SiteHeader
           :brand="siteHeader.brand"
           :menu-items="siteHeader.menuItems"
         />
-        <CBox as="main" min-h="calc(100vh - 128px)" pt="16">
+        <CBox as="main" min-h="calc(100vh - 64px)" pt="16">
           <Nuxt />
         </CBox>
         <SiteFooter
           :copyright="siteFooter.copyright"
           :menu-items="siteFooter.menuItems"
+          :brand="siteFooter.brand"
+          :slogan="siteFooter.slogan"
+          :navs="siteFooter.navs"
         />
         <CookieConsent />
       </CBox>
@@ -45,6 +48,14 @@ export default {
       },
       update: (data) => data.siteFooter,
     },
+  },
+  data() {
+    return {
+      config: (theme, defaultConfig) => {
+        defaultConfig.light.color = theme.colors.gray[900]
+        return defaultConfig
+      },
+    }
   },
 }
 </script>
