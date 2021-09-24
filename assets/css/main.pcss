@@ -16,3 +16,9 @@ body {
     box-shadow: none;
   }
 }
+
+[id^='modal-portal'] {
+  > div > div {
+    z-index: var(--zIndices-modal);
+  }
+}

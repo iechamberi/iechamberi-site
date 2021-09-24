@@ -6,6 +6,10 @@ export default {
       linkText: 'nuestra política de cookies',
       buttonText: 'Acepto las cookies',
     },
+    quiltedImageList: {
+      previousImage: 'Imagen anterior',
+      nextImage: 'Próxima imagen',
+    },
   },
   pages: {},
   shared: {},

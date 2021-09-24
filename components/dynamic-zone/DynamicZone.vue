@@ -13,12 +13,22 @@
 import { paramCase } from 'param-case'
 import SimpleFeature from '@/components/feature/SimpleFeature'
 import ThreeColumnPictures from '@/components/three-column-pictures/ThreeColumnPictures'
+import CallToAction from '@/components/call-to-action/CallToAction'
+import CenteredContent from '@/components/content/CenteredContent'
+import ThreeColumnFeatures from '~/components/feature/ThreeColumnFeatures'
+import MasonryImageList from '~/components/masonry-image-list/MasonryImageList'
+import QuiltedImageList from '~/components/quilted-image-list/QuiltedImageList'
 
 export default {
   name: 'DynamicZone',
   components: {
     SimpleFeature,
     ThreeColumnPictures,
+    CallToAction,
+    CenteredContent,
+    ThreeColumnFeatures,
+    MasonryImageList,
+    QuiltedImageList,
   },
   props: {
     sections: {
