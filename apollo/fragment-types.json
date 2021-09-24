@@ -10,6 +10,24 @@
           },
           {
             "name": "ComponentSectionsThreeColumnPictures"
+          },
+          {
+            "name": "ComponentSectionsCallToAction"
+          },
+          {
+            "name": "ComponentSectionsCenteredContent"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "HomePageSectionsDynamicZone",
+        "possibleTypes": [
+          {
+            "name": "ComponentSectionsCallToAction"
+          },
+          {
+            "name": "ComponentSectionsThreeColumnFeatures"
           }
         ]
       },
@@ -39,6 +57,51 @@
             "name": "deleteAboutUsPayload"
           },
           {
+            "name": "Feature"
+          },
+          {
+            "name": "FeatureConnection"
+          },
+          {
+            "name": "FeatureAggregator"
+          },
+          {
+            "name": "FeatureGroupBy"
+          },
+          {
+            "name": "FeatureConnectionId"
+          },
+          {
+            "name": "FeatureConnectionCreated_at"
+          },
+          {
+            "name": "FeatureConnectionUpdated_at"
+          },
+          {
+            "name": "FeatureConnectionTitle"
+          },
+          {
+            "name": "FeatureConnectionText"
+          },
+          {
+            "name": "FeatureConnectionAction"
+          },
+          {
+            "name": "FeatureConnectionIcon"
+          },
+          {
+            "name": "FeatureConnectionLocale"
+          },
+          {
+            "name": "createFeaturePayload"
+          },
+          {
+            "name": "updateFeaturePayload"
+          },
+          {
+            "name": "deleteFeaturePayload"
+          },
+          {
             "name": "HomePage"
           },
           {
@@ -46,6 +109,42 @@
           },
           {
             "name": "deleteHomePagePayload"
+          },
+          {
+            "name": "Icon"
+          },
+          {
+            "name": "IconConnection"
+          },
+          {
+            "name": "IconAggregator"
+          },
+          {
+            "name": "IconGroupBy"
+          },
+          {
+            "name": "IconConnectionId"
+          },
+          {
+            "name": "IconConnectionCreated_at"
+          },
+          {
+            "name": "IconConnectionUpdated_at"
+          },
+          {
+            "name": "IconConnectionName"
+          },
+          {
+            "name": "IconConnectionSlug"
+          },
+          {
+            "name": "createIconPayload"
+          },
+          {
+            "name": "updateIconPayload"
+          },
+          {
+            "name": "deleteIconPayload"
           },
           {
             "name": "Link"
@@ -85,6 +184,54 @@
           },
           {
             "name": "deleteLinkPayload"
+          },
+          {
+            "name": "Page"
+          },
+          {
+            "name": "PageConnection"
+          },
+          {
+            "name": "PageAggregator"
+          },
+          {
+            "name": "PageGroupBy"
+          },
+          {
+            "name": "PageConnectionId"
+          },
+          {
+            "name": "PageConnectionCreated_at"
+          },
+          {
+            "name": "PageConnectionUpdated_at"
+          },
+          {
+            "name": "PageConnectionTitle"
+          },
+          {
+            "name": "PageConnectionSlug"
+          },
+          {
+            "name": "PageConnectionMetaTags"
+          },
+          {
+            "name": "PageConnectionHeader"
+          },
+          {
+            "name": "PageConnectionLocale"
+          },
+          {
+            "name": "PageConnectionPublished_at"
+          },
+          {
+            "name": "createPagePayload"
+          },
+          {
+            "name": "updatePagePayload"
+          },
+          {
+            "name": "deletePagePayload"
           },
           {
             "name": "PrivacyPolicy"
@@ -303,19 +450,61 @@
             "name": "ComponentCommonMetaTags"
           },
           {
+            "name": "ComponentCommonNav"
+          },
+          {
+            "name": "ComponentCommonTextWithIcon"
+          },
+          {
+            "name": "ComponentSectionsCallToAction"
+          },
+          {
             "name": "ComponentSectionsCenteredContent"
           },
           {
             "name": "ComponentSectionsHero"
           },
           {
+            "name": "ComponentSectionsMasonryImageList"
+          },
+          {
             "name": "ComponentSectionsPageHeader"
+          },
+          {
+            "name": "ComponentSectionsQuiltedImageList"
+          },
+          {
+            "name": "ComponentSectionsSimpleFeature"
+          },
+          {
+            "name": "ComponentSectionsThreeColumnFeatures"
+          },
+          {
+            "name": "ComponentSectionsThreeColumnPictures"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "PageSectionsDynamicZone",
+        "possibleTypes": [
+          {
+            "name": "ComponentSectionsCenteredContent"
+          },
+          {
+            "name": "ComponentSectionsCallToAction"
           },
           {
             "name": "ComponentSectionsSimpleFeature"
           },
           {
             "name": "ComponentSectionsThreeColumnPictures"
+          },
+          {
+            "name": "ComponentSectionsMasonryImageList"
+          },
+          {
+            "name": "ComponentSectionsQuiltedImageList"
           }
         ]
       },
@@ -328,6 +517,12 @@
           },
           {
             "name": "ComponentSectionsThreeColumnPictures"
+          },
+          {
+            "name": "ComponentSectionsCallToAction"
+          },
+          {
+            "name": "ComponentSectionsCenteredContent"
           }
         ]
       }
