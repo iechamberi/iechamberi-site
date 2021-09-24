@@ -1,11 +1,11 @@
 <template>
-  <CFlex :my="[12, 16, 20]">
+  <CFlex :mt="[8, 10, 12, '3.5rem']" :mb="[16, 20, 24, '7rem']">
     <Container>
       <CStack :spacing="4">
-        <CHeading as="h1" :font-size="['4xl', '5xl', '6xl']">
+        <CHeading as="h1" :font-size="['3xl', '4xl', '5xl', '6xl']">
           {{ title }}
         </CHeading>
-        <CText :font-size="['md', 'lg', 'xl']" max-w="2xl" color="gray.500">
+        <CText max-w="2xl" color="gray.500" :font-size="['md', 'lg', '2xl']">
           {{ summary }}
         </CText>
       </CStack>

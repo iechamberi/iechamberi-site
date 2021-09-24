@@ -5,6 +5,8 @@
       variant="unstyled"
       font-weight="normal"
       text-transform="uppercase"
+      border-radius="0"
+      py="0"
       >{{ $i18n.locale }}</c-menu-button
     >
     <c-menu-list p="2">
@@ -18,8 +20,8 @@
           :key="locale.code"
           :value="locale.code"
           rounded="md"
-          :_focus="{ bg: 'amber.100' }"
-          :_active="{ bg: 'amber.200' }"
+          :_focus="{ bg: 'transparent' }"
+          :_hover="{ bg: 'amber.100' }"
         >
           {{ locale.name }}
         </c-menu-item-option>
