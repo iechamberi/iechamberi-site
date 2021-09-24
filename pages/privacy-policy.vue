@@ -1,14 +1,14 @@
 <template>
-  <Container max-w="containers.md">
-    <CBox as="article" pt="12" pb="20">
-      <Content :data="privacyPolicy.content" />
-    </CBox>
-  </Container>
+  <CBox>
+    <PageHeader :title="page.header.title" :summary="page.header.summary" />
+    <DynamicZone :sections="page.sections" />
+  </CBox>
 </template>
 
 <script>
-import PRIVACY_POLICY_QUERY from '@/apollo/queries/privacy-policy'
+import PAGE_BY_SLUG_QUERY from '@/apollo/queries/pages/page-by-slug'
 import getMetaTags from '@/utils/meta-tags'
+import { last } from 'lodash'
 
 export default {
   nuxtI18n: {
@@ -19,19 +19,20 @@ export default {
   },
   async asyncData({ app, i18n }) {
     const client = app.apolloProvider.defaultClient
+    const slug = last(app.localePath('privacy-policy').split('/'))
     const { data } = await client.query({
-      query: PRIVACY_POLICY_QUERY,
-      variables: { locale: i18n.locale },
+      query: PAGE_BY_SLUG_QUERY,
+      variables: { slug, locale: i18n.locale },
     })
     return {
-      privacyPolicy: data.privacyPolicy,
+      page: data.pageBySlug,
     }
   },
   head() {
     const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
-    const metaTags = getMetaTags(this.privacyPolicy.metaTags)
+    const metaTags = getMetaTags(this.page.metaTags)
     return {
-      title: this.privacyPolicy.metaTags.title,
+      title: this.page.metaTags.title,
       htmlAttrs: {
         ...i18nHead.htmlAttrs,
       },

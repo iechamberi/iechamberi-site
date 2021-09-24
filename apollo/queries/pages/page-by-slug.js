@@ -1,25 +1,25 @@
 import { gql } from 'graphql-tag'
 import MetaTags from '@/apollo/fragments/meta-tags'
 import PageHeader from '@/apollo/fragments/page-header'
-import Sections from '@/apollo/fragments/sections'
+import PageSections from '@/apollo/fragments/page-sections'
 
-const WHAT_WE_BELIEVE_QUERY = gql`
+const PAGE_BY_SLUG_QUERY = gql`
   ${MetaTags}
   ${PageHeader}
-  ${Sections}
-  query AboutUs($locale: String) {
-    whatWeBelieve(locale: $locale) {
+  ${PageSections}
+  query pageBySlug($slug: String!, $locale: String) {
+    pageBySlug(slug: $slug, locale: $locale) {
       metaTags {
         ...MetaTags
       }
-      pageHeader {
+      header {
         ...PageHeader
       }
       sections {
-        ...Sections
+        ...PageSections
       }
     }
   }
 `
 
-export default WHAT_WE_BELIEVE_QUERY
+export default PAGE_BY_SLUG_QUERY

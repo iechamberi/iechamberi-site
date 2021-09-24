@@ -1,16 +1,14 @@
 <template>
   <CBox>
-    <PageHeader
-      :title="page.pageHeader.title"
-      :summary="page.pageHeader.summary"
-    />
+    <PageHeader :title="page.header.title" :summary="page.header.summary" />
     <DynamicZone :sections="page.sections" />
   </CBox>
 </template>
 
 <script>
-import WHAT_WE_BELIEVE_QUERY from '@/apollo/queries/what-we-believe'
+import PAGE_BY_SLUG_QUERY from '@/apollo/queries/pages/page-by-slug'
 import getMetaTags from '@/utils/meta-tags'
+import { last } from 'lodash'
 
 export default {
   nuxtI18n: {
@@ -21,12 +19,13 @@ export default {
   },
   async asyncData({ app, i18n }) {
     const client = app.apolloProvider.defaultClient
+    const slug = last(app.localePath('what-we-believe').split('/'))
     const { data } = await client.query({
-      query: WHAT_WE_BELIEVE_QUERY,
-      variables: { locale: i18n.locale },
+      query: PAGE_BY_SLUG_QUERY,
+      variables: { slug, locale: i18n.locale },
     })
     return {
-      page: data.whatWeBelieve,
+      page: data.pageBySlug,
     }
   },
   head() {

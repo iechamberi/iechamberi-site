@@ -1,17 +1,14 @@
 <template>
   <CBox>
-    <PageHeader
-      v-if="aboutUs"
-      :title="aboutUs.pageHeader.title"
-      :summary="aboutUs.pageHeader.summary"
-    />
-    <DynamicZone v-if="aboutUs" :sections="aboutUs.sections" />
+    <PageHeader :title="page.header.title" :summary="page.header.summary" />
+    <DynamicZone :sections="page.sections" />
   </CBox>
 </template>
 
 <script>
-import ABOUT_US_QUERY from '@/apollo/queries/about-us'
+import PAGE_BY_SLUG_QUERY from '@/apollo/queries/pages/page-by-slug'
 import getMetaTags from '@/utils/meta-tags'
+import { last } from 'lodash'
 
 export default {
   nuxtI18n: {
@@ -22,19 +19,20 @@ export default {
   },
   async asyncData({ app, i18n }) {
     const client = app.apolloProvider.defaultClient
+    const slug = last(app.localePath('about-us').split('/'))
     const { data } = await client.query({
-      query: ABOUT_US_QUERY,
-      variables: { locale: i18n.locale },
+      query: PAGE_BY_SLUG_QUERY,
+      variables: { slug, locale: i18n.locale },
     })
     return {
-      aboutUs: data.aboutUs,
+      page: data.pageBySlug,
     }
   },
   head() {
     const i18nHead = this.$nuxtI18nHead({ addSeoAttributes: true })
-    const metaTags = getMetaTags(this.aboutUs.metaTags)
+    const metaTags = getMetaTags(this.page.metaTags)
     return {
-      title: this.aboutUs.metaTags.title,
+      title: this.page.metaTags.title,
       htmlAttrs: {
         ...i18nHead.htmlAttrs,
       },
