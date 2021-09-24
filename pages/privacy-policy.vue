@@ -1,6 +1,5 @@
 <template>
   <CBox>
-    <PageHeader :title="page.header.title" :summary="page.header.summary" />
     <DynamicZone :sections="page.sections" />
   </CBox>
 </template>
