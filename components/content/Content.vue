@@ -1,8 +1,6 @@
 <template>
-  <div>
-    <!-- eslint-disable-next-line vue/no-v-html -->
-    <div class="c-content" v-html="$md.render(data)" />
-  </div>
+  <!-- eslint-disable-next-line vue/no-v-html -->
+  <div class="c-content" v-html="data" />
 </template>
 
 <script>
@@ -17,46 +15,193 @@ export default {
 }
 </script>
 
-<style scoped>
-.c-content::v-deep h1 {
-  font-size: 2.25rem;
-  font-weight: 800;
-  margin-bottom: 2rem;
-}
-.c-content::v-deep h2 {
-  font-size: 1.875rem;
-  font-weight: 700;
-  margin-top: 2rem;
-  margin-bottom: 1.5rem;
-}
-.c-content::v-deep h3 {
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 1.25rem;
-}
-.c-content::v-deep h4 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  margin-bottom: 1.25rem;
-}
-.c-content::v-deep p,
-.c-content::v-deep ul {
-  font-size: 1.125rem;
-  color: #4a5568;
-  margin-bottom: 1.25rem;
-}
-.c-content::v-deep ul {
-  margin-left: 1.25rem;
-}
-.c-content::v-deep ul li {
-  margin-bottom: 1.25rem;
-}
-.c-content::v-deep a {
-  color: #f59e0b;
-  font-weight: 500;
-}
-.c-content::v-deep a:hover,
-.c-content::v-deep a:focus {
-  text-decoration: underline;
+<style lang="postcss" scoped>
+@import '@/assets/css/settings/_settings.breakpoints.pcss';
+
+.c-content {
+  &::v-deep {
+    h1,
+    h2,
+    h3,
+    h4 {
+      line-height: var(--lineHeights-shorter);
+      font-weight: var(--fontWeights-extrabold);
+      font-family: var(--fonts-heading);
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    h1 {
+      font-size: var(--fontSizes-2xl);
+      margin-top: var(--space-16);
+      margin-bottom: var(--sizes-6);
+
+      @media screen and (min-width: breakpoint-md) {
+        font-size: var(--fontSizes-4xl);
+      }
+
+      @media screen and (min-width: breakpoint-lg) {
+        font-size: var(--fontSizes-5xl);
+      }
+
+      @media screen and (min-width: breakpoint-xl) {
+        font-size: var(--fontSizes-6xl);
+      }
+    }
+
+    h2 {
+      font-size: var(--fontSizes-xl);
+      margin-top: var(--space-12);
+      margin-bottom: var(--sizes-5);
+
+      @media screen and (min-width: breakpoint-md) {
+        font-size: var(--fontSizes-2xl);
+      }
+
+      @media screen and (min-width: breakpoint-lg) {
+        font-size: var(--fontSizes-3xl);
+      }
+
+      @media screen and (min-width: breakpoint-xl) {
+        font-size: var(--fontSizes-4xl);
+      }
+    }
+
+    h3 {
+      font-size: var(--fontSizes-lg);
+      margin-top: var(--space-10);
+      margin-bottom: var(--sizes-4);
+
+      @media screen and (min-width: breakpoint-md) {
+        font-size: var(--fontSizes-xl);
+      }
+
+      @media screen and (min-width: breakpoint-lg) {
+        font-size: var(--fontSizes-2xl);
+      }
+
+      @media screen and (min-width: breakpoint-xl) {
+        font-size: var(--fontSizes-3xl);
+      }
+    }
+
+    h4 {
+      font-size: var(--fontSizes-md);
+      margin-top: var(--space-8);
+      margin-bottom: var(--sizes-3);
+
+      @media screen and (min-width: breakpoint-md) {
+        font-size: var(--fontSizes-lg);
+      }
+
+      @media screen and (min-width: breakpoint-lg) {
+        font-size: var(--fontSizes-xl);
+      }
+
+      @media screen and (min-width: breakpoint-xl) {
+        font-size: var(--fontSizes-2xl);
+      }
+    }
+
+    p,
+    ul {
+      color: var(--colors-gray-700);
+      font-size: var(--fontSizes-md);
+      margin-bottom: var(--sizes-8);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      @media screen and (min-width: breakpoint-md) {
+        font-size: var(--fontSizes-lg);
+        line-height: var(--lineHeights-tall);
+      }
+
+      @media screen and (min-width: breakpoint-lg) {
+        font-size: var(--fontSizes-xl);
+      }
+    }
+
+    ul {
+      margin-left: var(--sizes-16);
+
+      li {
+        margin-bottom: var(--sizes-2);
+      }
+    }
+
+    a {
+      color: var(--colors-amber-500);
+      font-weight: var(--fontWeights-medium);
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+
+    .image {
+      background-color: var(--colors-white);
+      margin-bottom: var(--sizes-8);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      img {
+        margin-bottom: var(--sizes-3);
+        width: var(--sizes-full);
+      }
+
+      figcaption {
+        color: var(--colors-gray-500);
+        font-size: var(--fontSizes-sm);
+      }
+    }
+
+    .image-style-align-right,
+    .image-style-align-left {
+      margin-bottom: var(--sizes-8);
+
+      img {
+        @media screen and (min-width: breakpoint-sm) {
+          max-width: var(--sizes-48);
+        }
+
+        @media screen and (min-width: breakpoint-md) {
+          max-width: var(--sizes-xs);
+        }
+      }
+    }
+
+    .image-style-align-right {
+      @media screen and (min-width: breakpoint-sm) {
+        float: right;
+        margin-left: var(--sizes-16);
+      }
+    }
+
+    .image-style-align-left {
+      @media screen and (min-width: breakpoint-sm) {
+        float: left;
+        margin-right: var(--sizes-16);
+      }
+    }
+
+    .text-small {
+      font-size: var(--fontSizes-sm);
+
+      @media screen and (min-width: breakpoint-md) {
+        font-size: var(--fontSizes-md);
+        line-height: var(--lineHeights-base);
+      }
+    }
+  }
 }
 </style>

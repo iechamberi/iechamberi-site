@@ -65,11 +65,9 @@ export default {
 </script>
 
 <style lang="postcss" scoped>
-@import '@/assets/css/settings/_settings.colors.pcss';
-
 nav {
   .nuxt-link-exact-active {
-    color: color-gray-400;
+    color: var(--colors-gray-400);
     pointer-events: none;
   }
 }
