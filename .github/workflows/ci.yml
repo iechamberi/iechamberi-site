@@ -49,7 +49,7 @@ jobs:
         run: yarn lint
 
       - name: Invoke CD workflow 🚀
-        uses: benc-uk/workflow-dispatch@v1
+        uses: benc-uk/workflow-dispatch@v121
         if: ${{ github.event_name == 'push' }}
         with:
           workflow: cd
